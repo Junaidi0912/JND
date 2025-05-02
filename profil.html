@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Pengguna - KomunitasKita</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome untuk Ikon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Profil Header */
+    .profile-header {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .profile-header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff4b2b;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-header img:hover {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    .profile-name {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+
+    .profile-bio {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .profile-stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .profile-stats div {
+      text-align: center;
+    }
+
+    .profile-stats b {
+      display: block;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .edit-profile-btn {
+      margin-top: 20px;
+      display: inline-block;
+      background-image: linear-gradient(to right, #ff4b2b, #ff416c);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .edit-profile-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 75, 43, 0.4);
+    }
+
+    /* Tab Navigation */
+    .profile-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .profile-tabs a {
+      padding: 10px 0;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .profile-tabs a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ff4b2b;
+    }
+
+    .profile-tabs a:hover {
+      color: #ff4b2b;
+    }
+
+    /* Feed Posting */
+    .feed {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .post {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+    }
+
+    .post img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .profile-stats {
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      .profile-tabs {
+        gap: 15px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Profil Header -->
+    <div class="profile-header">
+      <img src="gambar.jpg" alt="Foto Profil">
+      <div class="profile-name">Zerokainatu0912</div>
+      <div class="profile-bio">Suka makan dan berbagi momen terbaik.</div>
+      <div class="profile-stats">
+        <div><b>1</b> Posting</div>
+        <div><b>100T</b> Pengikut</div>
+        <div><b>300</b> Diikuti</div>
+      </div>
+      <a href="#" class="edit-profile-btn">Edit Profil</a>
+    </div>
+
+    <!-- Tab Navigasi -->
+    <div class="profile-tabs">
+      <a href="#" class="active"><i class="fas fa-th-large"></i> Posting</a>
+      <a href="#"><i class="fas fa-bookmark"></i> Disimpan</a>
+      <a href="#"><i class="fas fa-user-tag"></i> Ditag</a>
+    </div>
+
+    <!-- Feed Posting -->
+    <div class="feed">
+      <!-- Contoh Posting -->
+      <div class="post">
+        <img src="mie ayam 1.jpg">
+      </div>
+      <div class="post">
+        <img src="mie ayam 2.jpg">
+      </div>
+      <div class="post">
+        <img src="mie ayam 3.jpg">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
